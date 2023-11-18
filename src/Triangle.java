@@ -35,24 +35,5 @@ public class Triangle {
             
             System.out.print("\n");
         }
-
-        spacesToPrint = 0;
-        symbolsToPrint = number;
-
-        for(int numberOfLines = linesToPrint; numberOfLines >= 0; numberOfLines--) {
-            for(int i = 0; i < spacesToPrint; i++) {
-                System.out.print(" ");
-            }
-
-            for(int i = symbolsToPrint; i > 0; i--) {
-                System.out.print("*");
-            }
-
-
-            spacesToPrint++;
-            symbolsToPrint-=2;
-
-            System.out.print("\n");
-        }
     }
 }
