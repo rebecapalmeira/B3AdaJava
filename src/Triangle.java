@@ -17,22 +17,41 @@ public class Triangle {
             number = scanner.nextInt();
         }
 
-        int lines = (number - 1) / 2;
-        int spacesInLine = lines;
-        int symbols = 1;
+        int linesToPrint = (number - 1) / 2;
+        int spacesToPrint = linesToPrint;
+        int symbolsToPrint = 1;
 
-        for(int numberOfLines = lines; numberOfLines >= 0; numberOfLines--) {
-            for(int numberOfSpaces = spacesInLine; numberOfSpaces > 0; numberOfSpaces--) {
+        for(int numberOfLines = linesToPrint; numberOfLines >= 0; numberOfLines--) {
+            for(int i = spacesToPrint; i > 0; i--) {
                 System.out.print(" ");
             }
 
-            for(int numberOfSymbols = 0; numberOfSymbols < symbols; numberOfSymbols++) {
+            for(int i = 0; i < symbolsToPrint; i++) {
                 System.out.print("*");
             }
 
-            spacesInLine--;
-            symbols+=2;
+            spacesToPrint--;
+            symbolsToPrint+=2;
             
+            System.out.print("\n");
+        }
+
+        spacesToPrint = 0;
+        symbolsToPrint = number;
+
+        for(int numberOfLines = linesToPrint; numberOfLines >= 0; numberOfLines--) {
+            for(int i = 0; i < spacesToPrint; i++) {
+                System.out.print(" ");
+            }
+
+            for(int i = symbolsToPrint; i > 0; i--) {
+                System.out.print("*");
+            }
+
+
+            spacesToPrint++;
+            symbolsToPrint-=2;
+
             System.out.print("\n");
         }
     }
