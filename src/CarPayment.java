@@ -20,6 +20,11 @@ public class CarPayment {
         System.out.println("Qual valor aproximado deseja pagar de parcela, a partir de R$ 1000,00 (mil reais)?");
         installmentValue = scanner.nextDouble();
 
+        while (installmentValue < 1000) {
+            System.out.println("Valor de parcela informado é inferior ao mínimo permitido de mil reais.\nInforme um valor a partir de R$ 1000,00");
+            installmentValue = scanner.nextDouble();
+        }
+
         financingTerm = (int) carPrice / (int)installmentValue;
         installmentValue = carPrice / financingTerm;
 
