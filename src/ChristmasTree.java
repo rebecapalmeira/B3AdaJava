@@ -3,8 +3,7 @@ import java.util.Scanner;
 public class ChristmasTree {
     public static void main(String[] args) {
         /*
-        Criei uma branch separada para publicar a resolução do terceiro exercício que foi concluída FORA DO PRAZO
-        A resolução PARCIAL dentro do prazo está no código publicado na main branch
+        Gostei do exercício 3 e resolvi brincar com a ideia de imprimir uma árvore de Natal feita com lógica de programação básica
          */
 
         Scanner scanner = new Scanner(System.in);
